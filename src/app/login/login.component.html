@@ -1,0 +1,50 @@
+<div class="tui-container">
+  <h3 class="tui-text_h3">МЕСТО</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="signIn()" class="form">
+    <h3 class="tui-form__header">Электронная почта</h3>
+    <div class="tui-form__row">
+      <tui-input
+        formControlName="email"
+      >
+        Введите электронную почту
+        <input
+          placeholder="yourname@email.com"
+          tuiTextfield
+        />
+      </tui-input>
+    </div>
+    <h3 class="tui-form__header">Пароль</h3>
+    <div class="tui-form__row">
+      <tui-input-password formControlName="password">
+        Введите пароль
+        <input
+          placeholder="Make it secure!"
+          tuiTextfield
+        />
+      </tui-input-password>
+    </div>
+    <div class="tui-form__row">
+      <div class="tui-form__buttons">
+        <button
+          size="l"
+          tuiButton
+          type="submit"
+          class="tui-form__button"
+        >
+          Войти
+        </button>
+        <button
+          appearance="flat"
+          size="l"
+          tuiButton
+          type="button"
+          class="tui-form__button"
+        >
+          Отменить
+        </button>
+      </div>
+    </div>
+  </form>
+  <p class="tui-text_body-l">Ещё нет аккаунта? <a routerLink="/registration" tuiLink>Создайте!</a></p>
+</div>
+

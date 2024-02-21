@@ -1,0 +1,32 @@
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tui-text_body-m{
+  color: var(--tui-text-02);
+}
+
+.profile-header-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.profile-header-buttons {
+  display: flex;
+  width: 100%;
+}
+
+.active-button {
+  width: 65%;
+}
+.not-active-button {
+  width: 35%;
+}
+

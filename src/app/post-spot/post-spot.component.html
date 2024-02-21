@@ -1,0 +1,44 @@
+<div class="tui-container">
+  <h3 class="tui-text_h3 margin-bottom">СОЗДАТЬ</h3>
+  <form [formGroup]="postForm">
+    <div class="image-placeholder">
+      <tui-svg src="tuiIconImageLarge"></tui-svg>
+    </div>
+    <input type="file" accept="image/*" (change)="onLoadImage($event)" hidden #image>
+    <button (click)="image.click()" id="loadImage" tuiButton appearance="primary" size="m" class="tui-space_top-2">Добавить фото</button>
+
+    <h3 class="tui-form__header">Название фото</h3>
+    <div class="tui-form__row">
+      <tui-input tuiTextfieldSize="m" formControlName="picture">
+        Введите название фото
+        <input type="text" tuiTextfield readonly />
+      </tui-input>
+    </div>
+
+    <h3 class="tui-form__header">Место</h3>
+    <div class="tui-form__row">
+      <tui-input tuiTextfieldSize="m" formControlName="title">
+        Введите название места
+        <input tuiTextfield />
+      </tui-input>
+    </div>
+
+    <h3 class="tui-form__header">Ссылка</h3>
+    <div class="tui-form__row">
+      <tui-input tuiTextfieldSize="m" formControlName="link">
+        Вставьте ссылку на место из Google Maps
+        <input tuiTextfield />
+      </tui-input>
+    </div>
+
+    <h3 class="tui-form__header">Описание</h3>
+    <div class="tui-form__row">
+      <tui-input tuiTextfieldSize="m" formControlName="description">
+        Добавьте описание
+        <input tuiTextfield />
+      </tui-input>
+    </div>
+
+    <button tuiButton appearance="primary" size="m" class="tui-space_top-2" type="button" [disabled]="postForm.invalid" (click) = createPost()>Опубликовать</button>
+  </form>
+</div>

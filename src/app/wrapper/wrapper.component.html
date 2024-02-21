@@ -1,0 +1,84 @@
+<header class="header">
+  <h4 style="margin: 0" class="tui-text_h4">МЕСТО</h4>
+  <tui-input tuiTextfieldSize="s" style="width: 300px" [tuiTextfieldIcon]="tuiIconSearch">
+    Поиск...
+    <input tuiTextfield>
+  </tui-input>
+  <nav>
+    <button
+      appearance="flat"
+      tuiButton
+      type="button"
+      class="tui-space_right-3"
+      routerLink="/feed"
+    >
+      Блог
+    </button>
+    <button
+      appearance="flat"
+      tuiButton
+      type="button"
+      class="tui-space_right-3"
+    >
+      Лента
+    </button>
+    <button
+      appearance="flat"
+      tuiButton
+      type="button"
+      class="tui-space_right-3"
+      routerLink="/post-selector"
+    >
+      Создать
+    </button>
+    <button
+      appearance="flat"
+      tuiButton
+      type="button"
+      class="tui-space_right-3"
+      *ngIf="!profile; else account"
+      routerLink="/login"
+    >
+      Войти
+    </button>
+    <ng-template #account>
+      <tui-hosted-dropdown  [content]="content">
+        <button
+          tuiButton
+          type="button"
+          [iconRight]="arrow"
+        >
+          Мой аккаунт
+        </button>
+      </tui-hosted-dropdown>
+      <ng-template #content>
+        <tui-data-list role="menu">
+          <tui-opt-group
+            *ngFor="let dropdownItem of accountDropdown"
+          >
+            <button
+              *ngFor="let item of dropdownItem.items"
+              #rla="routerLinkActive"
+              role="menuitemradio"
+              routerLinkActive
+              tuiOption
+              [attr.aria-checked]="rla.isActive"
+              [routerLink]="item.routerLink"
+            >
+              {{ item.label }}
+              <tui-svg
+                *ngIf="rla.isActive"
+                src="tuiIconCheck"
+              ></tui-svg>
+            </button>
+          </tui-opt-group>
+          <tui-opt-group>
+            <button tuiOption routerLink="/login" (click)="logout()">Выйти</button>
+          </tui-opt-group>
+        </tui-data-list>
+      </ng-template>
+    </ng-template>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+

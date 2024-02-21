@@ -1,0 +1,47 @@
+  <form [formGroup]="editProfileForm" (ngSubmit)="editUser(profile?.id!)" class="form-styling">
+    <h3 class="tui-form__header">Имя</h3>
+    <div class="tui-form__row">
+      <tui-input
+        [tuiTextfieldLabelOutside]="true"
+        formControlName="firstname"
+      >
+        <input
+          tuiTextfield
+          [value]="profile?.firstname"
+        />
+      </tui-input>
+    </div>
+    <h3 class="tui-form__header">Логин</h3>
+    <div class="tui-form__row">
+      <tui-input
+        formControlName="login"
+        [tuiTextfieldLabelOutside]="true"
+      >
+        <input
+          placeholder="yourname@email.com"
+          tuiTextfield
+          [value]="profile?.login"
+        />
+      </tui-input>
+    </div>
+    <h3 class="tui-form__header">Описание</h3>
+    <div class="tui-form__row">
+      <tui-textarea
+        formControlName="about"
+        class="tui-space_bottom-4 field-large"
+      >
+        Type a text
+      </tui-textarea>
+    </div>
+    <div class="tui-form__buttons">
+      <button
+        size="l"
+        tuiButton
+        type="submit"
+        class="tui-form__button"
+        appearance="primary"
+      >
+        Cохранить изменения
+      </button>
+    </div>
+  </form>

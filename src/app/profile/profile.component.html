@@ -1,0 +1,35 @@
+<div class="tui-container tui-space_top-3">
+  <div class="profile-header">
+    <div class="profile-header-main">
+      <tui-avatar size="xl" [rounded]="true">xxl</tui-avatar>
+      <!--  TODO: Avatar uploading  -->
+      <div>
+        <h4 class="tui-text_h4 margin-auto">@{{profile?.login}}</h4>
+        <p class="tui-text_body-m margin-auto">{{profile?.firstname}}</p>
+      </div>
+    </div>
+    <p class="tui-text_body-l">{{profile?.about}}</p>
+  </div>
+  <tui-tabs>
+    <button
+      tuiTab
+    >
+      <tui-svg
+        src="tuiIconTrello"
+        class="tui-space_right-2"
+      ></tui-svg>
+      Posts
+    </button>
+    <button
+      tuiTab
+    >
+      <tui-svg
+        src="tuiIconBookmark"
+        class="tui-space_right-2"
+      ></tui-svg>
+      Saves
+    </button>
+  </tui-tabs>
+
+  <!--  TODO: ngfor for posts of current user to display his images -->
+</div>

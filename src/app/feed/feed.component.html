@@ -1,0 +1,6 @@
+<div *ngFor="let post of posts">
+  <h3>{{post.title}}</h3>
+  <p>{{post.description}}</p>
+  <a>{{post.link}}</a>
+  <img [src] = post.picture alt="picture">
+</div>

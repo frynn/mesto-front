@@ -1,0 +1,114 @@
+<div class="tui-container">
+  <h3 class="tui-text_h3">МЕСТО</h3>
+  <form [formGroup]="mainForm" (ngSubmit)="signUp()" class="form-border">
+    <h3 class="tui-form__header">Логин</h3>
+    <div class="tui-form__row">
+      <tui-input
+        formControlName="login"
+        tuiTextfieldSize="m"
+      >
+        Введите логин
+        <input
+          tuiTextfield
+        />
+      </tui-input>
+    </div>
+    <h3 class="tui-form__header">Электронная почта</h3>
+    <div class="tui-form__row">
+      <tui-input
+        formControlName="email"
+        tuiTextfieldSize="m"
+      >
+        Введите электронную почту
+        <input
+          placeholder="yourname@email.com"
+          tuiTextfield
+        />
+      </tui-input>
+    </div>
+    <h3 class="tui-form__header">Пароль</h3>
+    <div class="tui-form__row">
+      <tui-input-password formControlName="password" tuiTextfieldSize="m">
+        Введите пароль
+        <input
+          placeholder="Make it secure!"
+          tuiTextfield
+        />
+      </tui-input-password>
+    </div>
+    <div class="tui-form__row">
+      <tui-input-password formControlName="password_confirm" tuiTextfieldSize="m">
+        Подтвердите пароль
+        <input
+          tuiTextfield
+        />
+      </tui-input-password>
+    </div>
+    <h3 class="tui-form__header">Личные данные</h3>
+    <div class="tui-form__row">
+      <tui-input
+        formControlName="firstname"
+        tuiTextfieldSize="m"
+        >
+          Введите имя
+            <input
+              tuiTextfield
+            />
+      </tui-input>
+    </div>
+    <div class="tui-form__row">
+          <tui-input
+            formControlName="secondname"
+            tuiTextfieldSize="m"
+          >
+            Введите фамилию
+            <input
+              tuiTextfield
+            />
+          </tui-input>
+        </div>
+    <div class="tui-form__row">
+          <tui-input
+            formControlName="patronymic"
+            tuiTextfieldSize="m"
+          >
+            Введите отчество
+            <input
+              tuiTextfield
+            />
+          </tui-input>
+        </div>
+    <h3 class="tui-form__header">Дата рождения</h3>
+    <div class="tui-form__row">
+      <tui-input-date
+        formControlName="date"
+        tuiTextfieldSize="m"
+        [tuiTextfieldLabelOutside]="true"
+      >
+        Выберите дату
+      </tui-input-date>
+    </div>
+    <div class="tui-form__row">
+      <div class="tui-form__buttons">
+        <button
+          size="l"
+          tuiButton
+          type="submit"
+          class="tui-form__button"
+        >
+          Регистрация
+        </button>
+        <button
+          appearance="flat"
+          size="l"
+          tuiButton
+          type="button"
+          class="tui-form__button"
+        >
+          Отменить
+        </button>
+      </div>
+    </div>
+  </form>
+  <p class="tui-text_body-l">Уже есть аккаунт? <a routerLink="/login" tuiLink>Войдите!</a></p>
+</div>

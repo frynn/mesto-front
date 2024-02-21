@@ -1,0 +1,31 @@
+<div class="tui-container">
+  <tui-accordion class="container">
+    <tui-accordion-item [open]="true">
+      Опубликовать локацию
+      <ng-template tuiAccordionItemContent>
+        <div class="flex-container">
+          Поделитесь интересной локацией со всеми пользователями "Место"
+          <button tuiButton appearance="primary" size="m" routerLink="/create/post-spot">Создать!</button>
+        </div>
+      </ng-template>
+    </tui-accordion-item>
+    <tui-accordion-item>
+      Организовать мероприятие
+      <ng-template tuiAccordionItemContent>
+        <div class="flex-container">
+          Пригласите пользователей на увлекательную тематическую вечеринку или развлечение!
+          <button tuiButton appearance="primary" size="m">Создать!</button>
+        </div>
+      </ng-template>
+    </tui-accordion-item>
+    <tui-accordion-item>
+      Поделиться маршрутом
+      <ng-template tuiAccordionItemContent>
+        <div class="flex-container">
+          Поделитесь невероятным маршрутом для прогулки или активного отдыха!
+          <button tuiButton appearance="primary" size="m">Создать!</button>
+        </div>
+      </ng-template>
+    </tui-accordion-item>
+  </tui-accordion>
+</div>
